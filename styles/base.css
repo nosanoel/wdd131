@@ -1,4 +1,6 @@
 /* base.css */
+
+/* ----- General Page Styling ----- */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -7,6 +9,7 @@ body {
   color: #333;
 }
 
+/* ----- Header Section ----- */
 header {
   background-color: #004080;
   color: white;
@@ -20,11 +23,14 @@ header {
   font-weight: bold;
 }
 
+/* ----- Navigation Styling ----- */
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 nav a {
@@ -32,13 +38,16 @@ nav a {
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
-}
-
-nav a:hover {
-  background-color: #0066cc;
   border-radius: 5px;
 }
 
+nav a:hover,
+nav a:focus {
+  background-color: #0066cc;
+  outline: none;
+}
+
+/* ----- Main Section ----- */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -49,11 +58,19 @@ main {
 
 h1 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ----- Card Styling for Sections ----- */
 .card {
   background-color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -65,6 +82,16 @@ h1 {
   margin: 1rem 0;
 }
 
+.card ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ----- Footer Styling ----- */
 footer {
   background-color: #004080;
   color: white;
@@ -75,4 +102,25 @@ footer {
 
 footer p {
   margin: 0.5rem 0;
+}
+
+/* ----- Responsive Styling ----- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    padding: 0 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
 }
