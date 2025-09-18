@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A beautiful destination in nigeria">
-        <meta name="description" content="WDD 131 -Dynamic Web Fundamentals | Student Portfolio - Idehen Nosayaba">
-        <meta name="author" content="Idehen Nosayaba">
-        <title>Exploreing Nigeria</title>
-         <!--  Google Fonts: Roboto and Merriweather -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Nigeria - Culture, Afrobeat, and Beautiful Destinations.">
+  <meta name="author" content="Idehen Nosayaba">
+  <title>Exploring Nigeria</title>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/place.css">
-          <script src="scripts/place.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to nigeria</h1>
-        </header>
-        <main>
-            <section class="hero">
-                <picture class="view">
-                    <img src="images/lagos4.webp" alt="view of lagos" class="view">
-                </picture>
-            </section>
-            <section class="info">
-                <div class="aboutnigeria">
-                    <h2 class="aboutnigeria">About Nigeria</h2>
-                    <p> Nigeria is a country in West african known for its rich culture, afrobeat, and artworks.</p>
-                </div>
-            </section>
-            <section class="weather">
-                <h2 class="weather-heading">Weather</h2>
-                <img class="weather-icon" src="images/reshot.svg" alt="Cloudy icon"/>
-                <p>Temperature: <span id="temp">45</span> °F</p>
-                <p>Wind Speed: <span id="speed">5</span> mph</p>
-                <p>Wind Chill: <span id="windchill">N/A</span> °F</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; <span id="year"></span> idehen nosayaba</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </footer>
-    </body>
+  
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Nigeria</h1>
+  </header>
+  <main>
+    <section class="hero">
+      <h2 class="visually-hidden">Scenic View of Lagos</h2>
+      <picture class="view">
+        <img src="images/lagos4.webp" alt="View of Lagos" class="view">
+      </picture>
+    </section>
+    <section class="info">
+      <div class="aboutnigeria">
+        <h2>About Nigeria</h2>
+        <p>Nigeria is a country in West Africa known for its rich culture, Afrobeat, and artworks.</p>
+      </div>
+    </section>
+    <section class="weather">
+      <h2 class="weather-heading">Weather</h2>
+      <img class="weather-icon" src="images/reshot.svg" alt="Cloudy icon">
+      <p>Temperature: <span id="temp">45</span> °F</p>
+      <p>Wind Speed: <span id="speed">5</span> mph</p>
+      <p>Wind Chill: <span id="windchill">N/A</span> °F</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Idehen Nosayaba</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
 </html>
