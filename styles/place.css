@@ -62,7 +62,7 @@ main {
     section {
         flex: 1;
         opacity: 1;
-        box-shadow: 50px rgba(  255 );
+        box-shadow: 50px;
     }
 }
 
