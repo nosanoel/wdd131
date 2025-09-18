@@ -68,7 +68,7 @@ main {
 
 .view {
     display: grid;
-    opacity: 2;
+    opacity: 1;
     box-shadow: none;
 }
 
