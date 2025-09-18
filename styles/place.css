@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #96becb;
+    --bg-color: #fefefe;
+    --text-color: #222;
+    background-image: linear-gradient(209deg, rgb(86, 150, 172) 51.0638%, rgb(82, 148, 170) 71.0638%, rgb(156, 193, 206) 87.6596%);
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-size: initial;
+    background-position: left center;
+    background-image: linear-gradient(209deg, rgb(7, 101, 133) 0%, rgb(16, 107, 138) 2.55319%, rgb(255, 255, 255) 43%);
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    padding: 1rem;
+}
+
+.weather-heading::after {
+    content: '';
+}
+
+.weather-icon {
+    width: 48px;
+    height: 48px;
+}
+
+/* Hide SVG on desktop */
+@media (min-width: 600px) {
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-heading::after {
+        content: " ⛅";
+    }
+
+    main {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    section {
+        flex: 1;
+        opacity: 1;
+        box-shadow: 50px rgba(255, 255, 255, 0);
+    }
+}
+
+.view {
+    display: grid;
+    opacity: 2;
+    box-shadow: none;
+}
+
+.aboutnigeria {
+    margin: 154px -64px 18px 15px;
+    padding-left: -8px;
+    padding-right: -2px;
+    padding-top: -24px;
+}
