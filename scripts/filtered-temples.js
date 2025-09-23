@@ -77,7 +77,9 @@ function filterTemples(type) {
   displayTemples(filtered);
 }
 
-document.getElementById("home").addEventListener("click", () => filterTemples("all"));
+document.getElementById("home").addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
 document.getElementById("old").addEventListener("click", () => filterTemples("old"));
 document.getElementById("new").addEventListener("click", () => filterTemples("new"));
 document.getElementById("large").addEventListener("click", () => filterTemples("large"));
