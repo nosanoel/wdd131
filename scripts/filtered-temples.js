@@ -4,38 +4,39 @@ const temples = [
     location: "Aba, Nigeria",
     dedicated: "2005, August, 7",
     area: 11500,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    imageUrl: "https://tse1.mm.bing.net/th/id/OIP.cBwWsnJEW3LYnnoU_YyHTwHaE8?pid=Api"
   },
   {
     templeName: "Manti Utah",
     location: "Manti, Utah, United States",
     dedicated: "1888, May, 21",
     area: 74792,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    imageUrl: "https://tse1.mm.bing.net/th/id/OIP.o2TvxUQY1yYxPdzAOk7jagHaE7?pid=Api"
   },
   {
     templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 40000,
-    imageUrl: "https://churchofjesuschrist.org/imgs/8c/0a/8c0a0f1cb06c44878558fa9aa7e9f16a06a3d2c6/full/320%2C/0/default"
+    imageUrl: "https://tse1.mm.bing.net/th/id/OIP.WckCHtVJDJxD_6MN10jUHAHaE7?pid=Api"
   },
   {
     templeName: "Paris France",
     location: "Paris, France",
     dedicated: "2017, May, 21",
     area: 44000,
-    imageUrl: "https://churchofjesuschrist.org/imgs/83/8c/838cf7b715b80a1d19b26eb1c961eb24934540c2/full/320%2C/0/default"
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/5ec026c4efeaaa19a98e40f0f1b4c6069ae63517/full/800%2C/0/default"
   },
   {
     templeName: "Tokyo Japan",
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 52700,
-    imageUrl: "https://churchofjesuschrist.org/imgs/99/49/99498594bcdbf6d0c665223a7c51757a2e316ddb/full/320%2C/0/default"
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/0e85ee02f9c7079448ade5ad4b8b0505a07b4231/full/320%2C/0/default"
   }
-  // Add more if you'd like
 ];
+
+
 
 function displayTemples(templesArray) {
   const container = document.getElementById("temples-container");
