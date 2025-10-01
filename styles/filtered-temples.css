@@ -49,10 +49,13 @@ nav button {
   transition: background-color 0.3s ease;
 }
 
-nav button:hover,
-nav button:focus {
+/* Removed :hover pseudo-class */
+
+/* Accessible focus styling */
+nav button:focus-visible {
   background-color: #217dbb;
-  outline: none;
+  outline: 2px solid #217dbb;
+  outline-offset: 2px;
 }
 
 main {
