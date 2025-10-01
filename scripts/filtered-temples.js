@@ -118,7 +118,7 @@ document.getElementById("new").addEventListener("click", () => filterTemples("ne
 document.getElementById("large").addEventListener("click", () => filterTemples("large"));
 document.getElementById("small").addEventListener("click", () => filterTemples("small"));
 
-// On page load
+
 window.addEventListener("DOMContentLoaded", () => {
   displayTemples(temples);
   document.getElementById("year").textContent = new Date().getFullYear();
