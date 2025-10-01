@@ -77,39 +77,26 @@ function displayTemples(templesArray) {
 
   templesArray.forEach(temple => {
     const card = document.createElement("section");
-
-    
-    const dedicatedDate = new Date(temple.dedicated);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = dedicatedDate.toLocaleDateString(undefined, options);
-
     card.innerHTML = `
       <h2>${temple.templeName}</h2>
       <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${formattedDate}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
       <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" loading="lazy" alt="Image of ${temple.templeName} Temple">
+      <img src="${temple.imageUrl}" loading="lazy" alt="Photo of ${temple.templeName} Temple">
     `;
-
     container.appendChild(card);
   });
 }
 
 function filterTemples(type) {
-  let filtered = [];
+  let filtered;
 
-  switch(type) {
+  switch (type) {
     case "old":
-      filtered = temples.filter(t => {
-        const year = new Date(t.dedicated).getFullYear();
-        return year < 1900;
-      });
+      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
       break;
     case "new":
-      filtered = temples.filter(t => {
-        const year = new Date(t.dedicated).getFullYear();
-        return year > 2000;
-      });
+      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
       break;
     case "large":
       filtered = temples.filter(t => t.area > 90000);
@@ -124,14 +111,16 @@ function filterTemples(type) {
   displayTemples(filtered);
 }
 
-document.getElementById("home").addEventListener("click", () => filterTemples("home"));
-document.getElementById("old").addEventListener("click", () => filterTemples("old"));
-document.getElementById("new").addEventListener("click", () => filterTemples("new"));
-document.getElementById("large").addEventListener("click", () => filterTemples("large"));
-document.getElementById("small").addEventListener("click", () => filterTemples("small"));
-
 window.addEventListener("DOMContentLoaded", () => {
   displayTemples(temples);
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent = document.lastModified;
+});
+
+// Add event listeners to <a> elements
+["home", "old", "new", "large", "small"].forEach(id => {
+  document.getElementById(id).addEventListener("click", e => {
+    e.preventDefault();
+    filterTemples(id);
+  });
 });
