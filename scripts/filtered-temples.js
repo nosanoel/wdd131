@@ -46,7 +46,7 @@ const temples = [
     location: "Lisbon, Portugal",
     dedicated: "2019-09-15",
     area: 23000,
-    imageUrl: "https://www.churchofjesuschrist.org/imgs/6bdfed7b64c85dce152169b8b8ab2ac6553d3652/full/800%2C/0/default"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lisbon-portugal-temple/lisbon-portugal-temple-6315-main.jpg"
   },
   {
     templeName: "Bangkok Thailand",
@@ -71,9 +71,6 @@ const temples = [
   }
 ];
 
-
-
-
 function displayTemples(templesArray) {
   const container = document.getElementById("temples-container");
   container.innerHTML = "";
@@ -96,10 +93,10 @@ function filterTemples(type) {
 
   switch (type) {
     case "old":
-      filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
       break;
     case "new":
-      filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
       break;
     case "large":
       filtered = temples.filter(t => t.area > 90000);
@@ -114,14 +111,14 @@ function filterTemples(type) {
   displayTemples(filtered);
 }
 
-document.getElementById("home").addEventListener("click", function () {
-    window.location.href = "index.html";
-  });
+// Event listeners for filter buttons
+document.getElementById("home").addEventListener("click", () => displayTemples(temples));
 document.getElementById("old").addEventListener("click", () => filterTemples("old"));
 document.getElementById("new").addEventListener("click", () => filterTemples("new"));
 document.getElementById("large").addEventListener("click", () => filterTemples("large"));
 document.getElementById("small").addEventListener("click", () => filterTemples("small"));
 
+// On page load
 window.addEventListener("DOMContentLoaded", () => {
   displayTemples(temples);
   document.getElementById("year").textContent = new Date().getFullYear();
