@@ -3,7 +3,7 @@ const temples = [
     templeName: "Aba Nigeria",
     location: "Aba, Nigeria",
     dedicated: "2005-08-07",
-    area: 11500,
+    area: 1000,
     imageUrl: "https://tse1.mm.bing.net/th/id/OIP.cBwWsnJEW3LYnnoU_YyHTwHaE8?pid=Api"
   },
   {
