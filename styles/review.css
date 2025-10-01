@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap');
 /* Basic reset and variables */
+
+
 :root {
   --primary-color: #2c3e50;
   --accent-color: #3498db;
   --light-color: #f9f9f9;
   --font-family: 'Roboto', sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 
 * {
   box-sizing: border-box;
