@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     productSelect.appendChild(option);
   });
 
-  // localStorage review count display (optional if you have a place to show it)
+  // localStorage review count display 
   const reviewCountDisplay = document.getElementById('reviewCountDisplay');
   if (reviewCountDisplay) {
     const count = localStorage.getItem('reviewCount') || 0;
