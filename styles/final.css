@@ -1,0 +1,275 @@
+/* Reset */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 27px;
+}
+
+.logo {
+    color: #00ffcc;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding-left: -12px;
+    margin-right: 76px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00ffcc;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    margin-right: 41px;
+}
+
+/* Hero with 3D Slider */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    padding-top: 60px;
+}
+
+.slider {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+}
+
+.slider img {
+    /* original transform */
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    /* Smooth hover */
+}
+
+.slider img:nth-child(1) {
+    --rot: 0deg;
+}
+
+.slider img:nth-child(2) {
+    --rot: 72deg;
+}
+
+.slider img:nth-child(3) {
+    --rot: 144deg;
+}
+
+.slider img:nth-child(4) {
+    --rot: 216deg;
+}
+
+.slider img:nth-child(5) {
+    --rot: 288deg;
+}
+
+.slider img {
+    transform: rotateY(var(--rot)) translateZ(500px);
+    margin-top: 149px;
+}
+
+.slider img:hover {
+    transform: rotateY(var(--rot)) translateZ(700px) scale(1.2);
+    filter: brightness(1.2);
+    z-index: 10;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.hero h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: #00ffcc;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #222;
+}
+
+.section.alt {
+    background: #333;
+}
+
+.section h2 {
+    color: #00ffcc;
+    margin-bottom: 1rem;
+}
+
+.section img {
+    margin-top: 1rem;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #00bfa5;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 1rem;
+    color: #bbb;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slider {
+        width: 280px;
+        height: 200px;
+    }
+
+    .slider img {
+        width: 220px;
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Mobile nav */
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        flex-direction: column;
+        background: rgba(0,0,0,0.95);
+        display: none;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: right;
+    }
+}
+
+.box {
+    box-sizing: border-box;
+    padding-top: 60;
+    margin-left: -1px;
+}
+
+.boxfit {
+    width: 236px;
+    object-fit: cover;
+    height: -6px;
+}
+
