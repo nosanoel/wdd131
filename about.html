@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Nigeria - Explore Nigeria</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/final.css">
+  <script src="scripts/script.js"></script>
 </head>
 <body>
 <header>
@@ -13,7 +14,7 @@
     <h2 class="logo">Explore Nigeria</h2>
     <div class="hamburger" id="hamburger">☰</div>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="final.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="culture.html">Culture</a></li>
       <li><a href="tourism.html">Tourism</a></li>
@@ -28,12 +29,17 @@
      It is home to over 250 ethnic groups, each with unique traditions, languages, and cuisines.</p>
   <p>Rich in natural resources, Nigeria has one of the largest economies in Africa and is known 
      for its oil, agriculture, and vibrant entrepreneurial spirit.</p>
-  <img src="https://picsum.photos/id/1056/800/400" alt="Nigerian Landscape">
+  <div class="image-hover-box">
+        <img src="images/Gashaka-Gumti_National_Park,_Taraba,_Nigeria.jpg" alt="Nigerian Culture" loading="lazy">
+        <div class="hover-text">gashaka-national-park</div>
+    </div>
 </section>
 
-<footer>
-  <p>&copy; 2025 Explore Nigeria | Designed by Nosa</p>
+  <footer>
+  <p>
+    &copy; <span id="current-year"></span> Explore Nigeria | Last updated: <span id="last-modified"></span> | Designed by Nosa
+  </p>
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>

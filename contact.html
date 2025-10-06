@@ -2,39 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Explore Nigeria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Tour - Explore Nigeria</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/final.css">
-  <script src="scripts/script.js"></script>
+  <link rel="stylesheet" href="styles/conter.css">
+  <script src="scripts/booking.js" defer></script>
 </head>
 <body>
-<header>
-  <nav>
-    <h2 class="logo">Explore Nigeria</h2>
-    <div class="hamburger" id="hamburger">☰</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="culture.html">Culture</a></li>
-      <li><a href="tourism.html">Tourism</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <h2 class="logo">Explore Nigeria</h2>
+      <div class="hamburger" id="hamburger">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="final.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="tourism.html">Tourism</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      
+      </ul>
+    </nav>
+  </header>
 
-<section class="section alt">
-  <h2>Contact Us</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <section class="section alt">
+    <h2>Book Your Tour</h2>
 
-<footer>
-  <p>&copy; 2025 Explore Nigeria | Designed by Nosa</p>
+    <form id="booking-form" class="contact-form">
+      <label for="full-name">Full Name *</label>
+      <input type="text" id="full-name" name="fullName" placeholder="Your Full Name" required>
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required >
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+      <label for="package">Tour Package *</label>
+      <select id="package" name="package" required>
+        <option value="">-- Select a Package --</option>
+      
+      </select>
+
+      <label for="guests">Number of Guests *</label>
+      <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+      <label for="date">Preferred Date *</label>
+      <input type="date" id="date" name="date" required >
+
+      <label for="requests">Special Requests</label>
+      <textarea id="requests" name="requests" rows="4" placeholder="Any special requests?"></textarea>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+
+    <div id="booking-message" class="success-message" style="display: none;"></div>
+  </section>
+
+  <footer>
+  <p>
+    &copy; <span id="current-year"></span> Explore Nigeria | Last updated: <span id="last-modified"></span> | Designed by Nosa
+  </p>
 </footer>
 
 </body>
